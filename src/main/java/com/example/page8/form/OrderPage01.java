@@ -21,11 +21,9 @@ import java.util.List;
 public class OrderPage01 extends WebPage {
 	private static final long serialVersionUID = 1L;
 
-	private IModel<Order> orderModel;
-
 	public OrderPage01() {
 		IService service = new Service();
-		orderModel = CompoundPropertyModel.of(Model.of(new Order()));
+		IModel<Order> orderModel = CompoundPropertyModel.of(Model.of(new Order()));
 
 		IModel<List<Dish>> dishes = LoadableDetachableModel.of(service::fetchDishes);
 

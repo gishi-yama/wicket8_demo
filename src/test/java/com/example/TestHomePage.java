@@ -8,19 +8,16 @@ import org.junit.Test;
 /**
  * Simple test using the WicketTester
  */
-public class TestHomePage
-{
+public class TestHomePage {
 	private WicketTester tester;
 
 	@Before
-	public void setUp()
-	{
+	public void setUp() {
 		tester = new WicketTester(new WicketApplication());
 	}
 
 	@Test
-	public void homepageRendersSuccessfully()
-	{
+	public void homepageRendersSuccessfully() {
 		//start and render the test page8
 		tester.startPage(OrderPage01.class);
 
