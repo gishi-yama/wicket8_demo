@@ -11,20 +11,21 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RadioChoice;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.Model;
 
 import java.util.List;
 
-public class HomePage extends WebPage {
+public class OrderPage01 extends WebPage {
 	private static final long serialVersionUID = 1L;
 
 	private IModel<Order> orderModel;
 
-	public HomePage() {
+	public OrderPage01() {
 		IService service = new Service();
-		orderModel = Model.of(new Order());
+		orderModel = CompoundPropertyModel.of(Model.of(new Order()));
 
 		IModel<List<Dish>> dishes = LoadableDetachableModel.of(service::fetchDishes);
 
@@ -33,7 +34,7 @@ public class HomePage extends WebPage {
 		queue(new TextField<>("userName").setRequired(true));
 		queue(new Label("numberOfDish", dishes.getObject()::size));
 		queue(new RadioChoice<>("dish", dishes).setSuffix("<br/>").setRequired(true));
-		queue(Button.onSubmit("onSubmit", (button) -> setResponsePage(new CompletionPage(orderModel))));
+		queue(Button.onSubmit("onSubmit", (b) -> setResponsePage(new CompletionPage(orderModel))));
 	}
 
 

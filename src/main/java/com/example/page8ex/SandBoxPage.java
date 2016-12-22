@@ -9,7 +9,7 @@ import org.apache.wicket.model.IModel;
 public class SandBoxPage extends WebPage {
 
 	public SandBoxPage() {
-		IModel<String> arom = new IModel<String>(){
+		IModel<String> arom = new IModel<String>() {
 
 			@Override
 			public String getObject() {
