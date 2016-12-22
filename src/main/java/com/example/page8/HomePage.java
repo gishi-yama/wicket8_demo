@@ -28,7 +28,7 @@ public class HomePage extends WebPage {
 
 		IModel<List<Dish>> dishes = LoadableDetachableModel.of(service::fetchDishes);
 
-		queue(new Form<>("form"));
+		queue(new Form<>("form", orderModel));
 		queue(new FeedbackPanel("feedback"));
 		queue(new TextField<>("userName").setRequired(true));
 		queue(new Label("numberOfDish", dishes.getObject()::size));
