@@ -19,7 +19,15 @@ public class Order implements Serializable {
 		return userName;
 	}
 
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
 	public Dish getDish() {
 		return dish;
+	}
+
+	public void setDish(Dish dish) {
+		this.dish = dish;
 	}
 }

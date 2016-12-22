@@ -1,6 +1,7 @@
-package com.example.page8;
+package com.example.page8.form;
 
 import com.example.data.Order;
+import com.example.page8.IndexPage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;

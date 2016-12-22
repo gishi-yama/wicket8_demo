@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.page8.OrderPage01;
+import com.example.page8.form.OrderPage01;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.example.page8;
+package com.example.page8.form;
 
 import com.example.data.Dish;
 import com.example.data.Order;

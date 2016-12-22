@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+  <meta charset="utf-8"/>
+</head>
+<body>
+<h1>注文フォーム</h1>
+<form wicket:id="form">
+  <dl>
+    <div wicket:id="feedback"></div>
+    <dt>お名前</dt>
+    <dd><input type="text" wicket:id="userName"></dd>
+    <dt>お食事</dt>
+    <dd>以下の<span wicket:id="numberOfDish"></span>品から一つお選びください。</dd>
+    <dd>
+      <div wicket:id="dish"></div>
+    </dd>
+  </dl>
+  <div>
+    <button type="submit" wicket:id="onSubmit">注文する</button>
+  </div>
+</form>
+</body>
+</html>
