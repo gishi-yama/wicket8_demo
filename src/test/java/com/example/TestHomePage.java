@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.page8.HomePage;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,10 +21,10 @@ public class TestHomePage
 	@Test
 	public void homepageRendersSuccessfully()
 	{
-		//start and render the test page
+		//start and render the test page8
 		tester.startPage(HomePage.class);
 
-		//assert rendered page class
+		//assert rendered page8 class
 		tester.assertRenderedPage(HomePage.class);
 	}
 }
