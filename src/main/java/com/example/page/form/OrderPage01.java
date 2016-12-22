@@ -1,4 +1,4 @@
-package com.example.page8.form;
+package com.example.page.form;
 
 import com.example.data.Dish;
 import com.example.data.Order;
@@ -19,7 +19,7 @@ import org.apache.wicket.model.Model;
 import java.util.List;
 
 public class OrderPage01 extends WebPage {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -8412714440456444538L;
 
 	public OrderPage01() {
 		IService service = new Service();
@@ -27,6 +27,7 @@ public class OrderPage01 extends WebPage {
 
 		IModel<List<Dish>> dishes = LoadableDetachableModel.of(service::fetchDishes);
 
+		// 階層が面倒なのでqueueを使っている
 		queue(new Form<>("form", orderModel));
 		queue(new FeedbackPanel("feedback"));
 		queue(new TextField<>("userName").setRequired(true));

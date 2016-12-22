@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.page8.form.OrderPage01;
+import com.example.page.form.OrderPage01;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,10 +18,10 @@ public class TestHomePage {
 
 	@Test
 	public void homepageRendersSuccessfully() {
-		//start and render the test page8
+		//start and render the test page
 		tester.startPage(OrderPage01.class);
 
-		//assert rendered page8 class
+		//assert rendered page class
 		tester.assertRenderedPage(OrderPage01.class);
 	}
 }

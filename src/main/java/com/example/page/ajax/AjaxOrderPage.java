@@ -1,8 +1,8 @@
-package com.example.page8.ajax;
+package com.example.page.ajax;
 
 import com.example.data.Dish;
 import com.example.data.Order;
-import com.example.page8.IndexPage;
+import com.example.page.IndexPage;
 import com.example.service.IService;
 import com.example.service.Service;
 import org.apache.wicket.ajax.markup.html.form.AjaxButton;
@@ -22,7 +22,7 @@ import org.apache.wicket.model.Model;
 import java.util.List;
 
 public class AjaxOrderPage extends WebPage {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -3577400730036348404L;
 
 	public AjaxOrderPage() {
 		IService service = new Service();

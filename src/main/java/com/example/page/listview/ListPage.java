@@ -1,4 +1,4 @@
-package com.example.page8.listview;
+package com.example.page.listview;
 
 import com.example.data.Dish;
 import com.example.service.IService;
@@ -13,6 +13,7 @@ import org.apache.wicket.model.LoadableDetachableModel;
 import java.util.List;
 
 public class ListPage extends WebPage {
+	private static final long serialVersionUID = 809218935650800573L;
 
 	public ListPage() {
 

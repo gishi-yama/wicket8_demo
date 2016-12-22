@@ -10,6 +10,7 @@ import static java.util.stream.Collectors.toList;
 
 // 通常はDIコンテナで生成するが、今回はデモなのでSerializableにして直接インスタンス化する
 public class Service implements IService, Serializable {
+	private static final long serialVersionUID = -2928949840850062106L;
 
 	@Override
 	public List<Dish> fetchDishes() {

@@ -1,6 +1,6 @@
 package com.example;
 
-import com.example.page8.IndexPage;
+import com.example.page.IndexPage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 

@@ -1,14 +1,15 @@
-package com.example.page8;
+package com.example.page;
 
-import com.example.page8.ajax.AjaxOrderPage;
-import com.example.page8.ajax.TimerPage;
-import com.example.page8.form.OrderPage01;
-import com.example.page8.form.OrderPage02;
-import com.example.page8.listview.ListPage;
+import com.example.page.ajax.AjaxOrderPage;
+import com.example.page.ajax.TimerPage;
+import com.example.page.form.OrderPage01;
+import com.example.page.form.OrderPage02;
+import com.example.page.listview.ListPage;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.link.Link;
 
 public class IndexPage extends WebPage {
+	private static final long serialVersionUID = 1010314105054227997L;
 
 	public IndexPage() {
 		add(Link.onClick("toListPage", (link) -> setResponsePage(new ListPage())));

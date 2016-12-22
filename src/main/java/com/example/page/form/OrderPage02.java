@@ -1,4 +1,4 @@
-package com.example.page8.form;
+package com.example.page.form;
 
 import com.example.data.Dish;
 import com.example.data.Order;
@@ -19,7 +19,7 @@ import org.apache.wicket.model.Model;
 import java.util.List;
 
 public class OrderPage02 extends WebPage {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -5689897487887700459L;
 
 	public OrderPage02() {
 		IService service = new Service();
