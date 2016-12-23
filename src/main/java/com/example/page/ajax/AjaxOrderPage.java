@@ -32,11 +32,13 @@ public class AjaxOrderPage extends WebPage {
 
 		Form<Order> form = new Form<>("form", orderModel);
 		add(form);
-		form.add(new FeedbackPanel("feedback"));
+		form.add(new FeedbackPanel("feedback").setOutputMarkupId(true));
 		form.add(new TextField<>("userName").setRequired(true));
 		form.add(new Label("numberOfDish", dishes.getObject()::size));
 		form.add(new RadioChoice<>("dish", dishes).setSuffix("<br/>").setRequired(true));
-		form.add(AjaxButton.onSubmit("onSubmit", (b, t) -> t.add(getPage().get("wmc"))));
+		form.add(AjaxButton.onSubmit("onSubmit",
+			(b, t) -> t.add(getPage().get("wmc")),
+			(b, t) -> t.add(b.getForm().get("feedback"))));
 
 
 		WebMarkupContainer wmc = new WebMarkupContainer("wmc", orderModel) {
