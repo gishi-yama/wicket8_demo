@@ -7,6 +7,9 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import org.wicketstuff.lambda.components.ComponentFactory;
+
+import static org.wicketstuff.lambda.components.ComponentFactory.*;
 
 public class CompletionPage extends WebPage {
 	private static final long serialVersionUID = 3057979294465321296L;
@@ -15,6 +18,6 @@ public class CompletionPage extends WebPage {
 		setDefaultModel(CompoundPropertyModel.of(orderModel));
 		add(new Label("userName"));
 		add(new Label("dish"));
-		add(Link.onClick("toIndexPage", (link) -> setResponsePage(IndexPage.class)));
+		add(link("toIndexPage", (link) -> setResponsePage(IndexPage.class)));
 	}
 }

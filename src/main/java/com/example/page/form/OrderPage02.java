@@ -27,12 +27,19 @@ public class OrderPage02 extends WebPage {
 
 		IModel<List<Dish>> dishes = LoadableDetachableModel.of(service::fetchDishes);
 
-		queue(new Form<>("form"));
+		queue(new Form<Order>("form", Model.of(order)) {
+			private static final long serialVersionUID = 3905585843235778328L;
+
+			@Override
+			protected void onSubmit() {
+				super.onSubmit();
+				setResponsePage(new CompletionPage(getModel()));
+			}
+		});
 		queue(new FeedbackPanel("feedback"));
 		queue(new TextField<>("userName", LambdaModel.of(order::getUserName, order::setUserName)).setRequired(true));
 		queue(new Label("numberOfDish", dishes.getObject()::size));
 		queue(new RadioChoice<>("dish", LambdaModel.of(order::getDish, order::setDish), dishes).setSuffix("<br/>").setRequired(true));
-		queue(Button.onSubmit("onSubmit", (b) -> setResponsePage(new CompletionPage(Model.of(order)))));
 	}
 
 
